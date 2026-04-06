@@ -7,6 +7,9 @@ plt.style.use('/Users/camwilson/Documents/plot_styles/custom_plot_style.txt')
 from definitions import run_multiclass_bdt, run_single_bdt, significances_multiclass, significances_wwttbar
 from dataframes import df_tot
 
+import os
+os.makedirs("Plots", exist_ok=True)
+
 
 # =====================================================================================================================
 
