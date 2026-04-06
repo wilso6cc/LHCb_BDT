@@ -8,7 +8,8 @@ from definitions import run_multiclass_bdt, run_single_bdt, significances_multic
 from dataframes import df_tot
 
 import os
-os.makedirs("Plots", exist_ok=True)
+name_of_plots_folder = 'Plots'
+os.makedirs(name_of_plots_folder, exist_ok=True)
 
 
 # =====================================================================================================================
@@ -58,7 +59,7 @@ plt.xlabel('WW Probability')
 plt.ylabel('Normalized Counts')
 plt.legend()
 plt.tight_layout()
-plt.savefig('./Plots/wwttbardfdy_initial_scores.png', dpi=300)
+plt.savefig(name_of_plots_folder+'/wwttbardfdy_initial_scores.png', dpi=300)
 
 new_dataframe = pd.concat([passed_ww, passed_dfdy, passed_ttbar])
 
@@ -92,7 +93,7 @@ plt.xlabel('WW Probability')
 plt.ylabel('Normalized Counts')
 plt.legend()
 plt.tight_layout()
-plt.savefig('./Plots/wwttbardfdy_final_scores.png', dpi=300)
+plt.savefig(name_of_plots_folder+'/wwttbardfdy_final_scores.png', dpi=300)
 
 # =====================================================================================================================
 
@@ -137,7 +138,7 @@ plt.xlabel('WW Probability')
 plt.ylabel('Normalized Counts')
 plt.legend()
 plt.tight_layout()
-plt.savefig('./Plots/wwttbar_scores.png', dpi=300)
+plt.savefig(name_of_plots_folder+'/wwttbar_scores.png', dpi=300)
 
 
 # =====================================================================================================================
@@ -185,7 +186,7 @@ plt.xlabel('WW Probability')
 plt.ylabel('Normalized Counts')
 plt.legend()
 plt.tight_layout()
-plt.savefig('./Plots/multiclass_scores.png', dpi=300)
+plt.savefig(name_of_plots_folder+'/multiclass_scores.png', dpi=300)
 
 
 table_data = [
